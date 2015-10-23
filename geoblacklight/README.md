@@ -1,5 +1,21 @@
 # geoblacklight
 
+## Caveats
+
+This is a modified version of the original `gazetteer.csv` document.
+
+The original CSV header:
+
+```
+"l_kw","geonames_kw","geonames_id","lc_kw","lc_id"
+```
+
+Has been replaced by:
+
+```
+unk:kw,gn:id,ng:kw,loc:kw,loc:id
+```
+
 ## LICENSE
 
 ```

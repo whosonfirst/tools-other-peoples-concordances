@@ -1,5 +1,13 @@
 # blackmad
 
+## Caveats
+
+This is a modified version of the original `geonames-geoplanet-matches.csv` document. It has been updated to add a CSV header:
+
+```
+gp:id,gn:id,label,latitude,longitude
+```
+
 ## LICENSE
 
 ```
