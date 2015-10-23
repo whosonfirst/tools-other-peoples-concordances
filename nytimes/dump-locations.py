@@ -50,12 +50,13 @@ if __name__ == '__main__':
 
             place[ source ] = other
 
-        places.append(place)
+            count = others.get(source, 0)
+            count += 1
 
-        count = others.get(source, 0)
-        count += 1
+            others[source] = count
 
-        others[source] = count
+        if len(place.keys()) > 1:
+            places.append(place)
 
     writer = csv.DictWriter(sys.stdout, fieldnames=others.keys())
     writer.writeheader()
