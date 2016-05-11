@@ -23,6 +23,8 @@ export GOPATH=`pwd`
 go run ttl2dump.go https://dumps.wikimedia.org/wikidatawiki/entities/20160509/wikidata-20160509-all-BETA.ttl.bz2 | grep P1566 | grep -v wdt > dump.txt
 ```
 
+This will also take a while.
+
 It is important to understand this is a lucky hack. The output of the above will look like this (until the Wikidata people change things...)
 
 ```
