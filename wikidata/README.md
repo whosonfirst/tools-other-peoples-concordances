@@ -6,7 +6,7 @@ This isn't push button easy yet.
 
 ## Usage
 
-You will need to have [Python]() installed on your computer.
+You will need to have `Python` and `bzip2` utility installed on your computer.
 
 First you will need to grab the [Wikidata RDF dump](https://m.wikidata.org/wiki/Wikidata:Database_download). Make sure to get the "Turtle" formatted files.
 
