@@ -6,7 +6,7 @@ This isn't push button easy yet.
 
 ## Usage
 
-You will need to have both [Go]() and [Python]() installed on your computer.
+You will need to have [Python]() installed on your computer.
 
 First you will need to grab the [Wikidata RDF dump](https://m.wikidata.org/wiki/Wikidata:Database_download). Make sure to get the "Turtle" formatted files.
 
@@ -19,13 +19,12 @@ This will take a while.
 Next you will need to tease out the Geonames data as identified by the `P1566` property.
 
 ```
-export GOPATH=`pwd`
-go run ttl2dump.go wikidata-20160509-all-BETA.ttl.bz2 | grep P1566 | grep -v wdt > dump.txt
+bzip2 -dc | wikidata-20160509-all-BETA.ttl.bz2 | grep P1566 | grep -v wdt > dump.txt
 ```
 
-This will also take a while.
+This will also take a while. It is important to understand this is a lucky hack. The output of the above will look like this (until the Wikidata people change things...)
 
-It is important to understand this is a lucky hack. The output of the above will look like this (until the Wikidata people change things...)
+_Also if you're wondering the `ttl2dump.go` tool was written before I realized you could do the same thing with plain-old `bzip2`..._
 
 ```
 wd:Q4288651 p:P1566 wds:Q4288651-502F2A91-9708-410A-AE4A-AAD0E50E1164 .
