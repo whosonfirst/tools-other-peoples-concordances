@@ -7,6 +7,15 @@ import csv
 
 if __name__ == '__main__':
 
+    import optparse
+    opt_parser = optparse.OptionParser()
+
+    opt_parser.add_option("-i", "--identifier", dest="identifier", default=None, help="...")
+
+    options, args = opt_parser.parse_args()
+
+    require = "ps:%s" % options.identifier
+
     dump = sys.argv[1]
     fh = open(dump, 'r')
 
@@ -31,7 +40,7 @@ if __name__ == '__main__':
         if not wdid:
             continue
 
-        if ln.startswith("ps:P1566"):
+        if ln.startswith(require):
 
             parts = ln.split(" ")
             gnid = parts[1]
