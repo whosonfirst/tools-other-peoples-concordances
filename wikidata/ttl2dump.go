@@ -3,6 +3,7 @@ package main
 import (
        "bufio"
 	"compress/bzip2"
+	"flag"
 	"fmt"
 	"os"
 )
@@ -10,9 +11,11 @@ import (
 
 func main() {
 
-	fname := "wikidata-20160509-all-BETA.ttl.bz2"
+     ttl := flag.String("ttl", "", "...")
 
-	fh, err := os.Open(fname)
+     flag.Parse()
+
+	fh, err := os.Open(*ttl)
 
 	if err != nil {
 		panic(err)
