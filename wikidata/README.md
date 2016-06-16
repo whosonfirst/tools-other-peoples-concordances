@@ -22,7 +22,7 @@ Next you will need to tease out the [Geonames](http://geonames.org) data as iden
 ./ttl2dump/bin/linux/ttl2dump -ttl wikidata-20160509-all-BETA.ttl.bz2 | grep P1566 | grep -v wdt > P1566.txt
 ```
 
-_[ttl2dump](ttl2dump) is a small utility written in [Go](http://golang.org) to stream the content of a bzip-encoded file so that you don't have to decompress the whole thing to start working with it (because it is HUGE). There are pre-compiled binary versions available for [OS X](ttl2dump/bin/darwin), [Linux](ttl2dump/bin/linux) and [Windows](ttl2dump/bin/windows)._
+_[ttl2dump](ttl2dump) is a small utility written in [Go](http://golang.org) to stream the content of a bzip-encoded file so that you don't have to decompress the whole thing to start working with it because it is HUGE. There are pre-compiled binary versions of `ttl2dump` available for [OS X](ttl2dump/bin/darwin) and [Linux](ttl2dump/bin/linux) and [Windows](ttl2dump/bin/windows)._
 
 This will also take a while. It is important to understand this is a lucky hack. The output of the above will look like this (until the Wikidata people change things...)
 
