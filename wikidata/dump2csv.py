@@ -11,6 +11,7 @@ if __name__ == '__main__':
     opt_parser = optparse.OptionParser()
 
     opt_parser.add_option("-i", "--identifier", dest="identifier", default=None, help="...")
+    opt_parser.add_option("-l", "--label", dest="label", default="other:id", help="...")
 
     options, args = opt_parser.parse_args()
 
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     fh = open(dump, 'r')
 
     writer = csv.writer(sys.stdout)
-    writer.writerow(('wd:id', 'gn:id'))
+    writer.writerow(('wd:id', options.label))
 
     wdid = None
     gnid = None
