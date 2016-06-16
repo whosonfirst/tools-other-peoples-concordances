@@ -19,7 +19,7 @@ This will take a while.
 Next you will need to tease out the Geonames data as identified by the `P1566` property.
 
 ```
-./ttl2dump/bin/linux/ttl2dump -ttl wikidata-20160509-all-BETA.ttl.bz2 | grep P238 | grep -v wdt > P238.txt
+./ttl2dump/bin/linux/ttl2dump -ttl wikidata-20160509-all-BETA.ttl.bz2 | grep P1566 | grep -v wdt > P1566.txt
 ```
 
 _[ttl2dump](ttl2dump)_ is a small utility written in [Go](http://golang.org) to stream the content of a bzip-encoded file so that you don't have to decompress the whole thing to start working with it (because it is HUGE)._
@@ -38,7 +38,7 @@ Oh well, right? It's easier than trying to load 76GB of data in to a triple stor
 Finally, parse the dump file in to a handy CSV file:
 
 ```
-python dump2csv.py -i P238 -l 'gn:id' P238.txt > wikidata-geonames.csv
+python dump2csv.py -i P1566 -l 'gn:id' P1566.txt > wikidata-geonames.csv
 ```
 
 Rinse and repeat.
