@@ -1,5 +1,4 @@
 *.txt
 *.bz2
 *.csv
-!wikidata-geonames.csv
-!wikidata-libraryofcongress.csv
+!wikidata-*.csv

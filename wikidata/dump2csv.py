@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     require = "ps:%s" % options.identifier
 
-    dump = sys.argv[1]
+    dump = args[0]
     fh = open(dump, 'r')
 
     writer = csv.writer(sys.stdout)
